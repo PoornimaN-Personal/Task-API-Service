@@ -1,0 +1,70 @@
+name: CI - Build, Test, Publish
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  # --------------------------
+  # 1. Build + Run Unit Tests
+  # --------------------------
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r src/requirements.txt
+          pip install pytest
+
+      - name: Run unit tests
+        run: pytest tests
+
+  # --------------------------
+  # 2. Build and Push Docker Image to GHCR
+  #    Only runs when tests succeed AND branch = main
+  # --------------------------
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Docker image
+        run: |
+          OWNER=${GITHUB_ACTOR,,} #lowercase
+          IMAGE_NAME=ghcr.io/$OWNER/task-api:latest
+          echo "Building image: $IMAGE_NAME"
+          docker build -t $IMAGE_NAME .
+
+      - name: Push Docker image
+        run: |
+          OWNER=${GITHUB_ACTOR,,} #lowercase
+          IMAGE_NAME=ghcr.io/$OWNER/task-api:latest
+          echo "Pushing image: $IMAGE_NAME"
+          docker push $IMAGE_NAME
+
+
+
+

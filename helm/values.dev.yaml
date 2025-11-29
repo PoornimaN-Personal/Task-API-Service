@@ -1,0 +1,7 @@
+# values.dev.yaml (example for someone else)
+
+replicaCount: 1
+
+image:
+  repository: ghcr.io/<your-git-username>/task-api
+  tag: latest
