@@ -1,0 +1,296 @@
+{
+  "version": 4,
+  "terraform_version": "1.13.5",
+  "serial": 33,
+  "lineage": "0d6aa1ea-8cd8-05c1-481f-076cad19e33f",
+  "outputs": {
+    "kubeconfig": {
+      "value": "Cluster Created!)",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "k3d_cluster",
+      "name": "taskapi",
+      "provider": "provider[\"registry.terraform.io/pvotal-tech/k3d\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "taskapi-cluster",
+            "kubeconfig_raw": "apiVersion: v1\nclusters:\n- cluster:\n    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUzTmpRME5qTTNOek13SGhjTk1qVXhNVE13TURBME9UTXpXaGNOTXpVeE1USTRNREEwT1RNegpXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUzTmpRME5qTTNOek13V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUMVJTSENaWmlSeUNFcmtZNU1xcmN0aWVYRmZSeVI5Zm5CVDNzTDVKeGcKaEJISXRLMlBadnYvaXlWNnJwSkMyMThUOGlxMU5LRWxOWHFlQiszZnJrb3RvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVVFERHRyVXhnYlFVWmVOeVZ1UTc4CmQ1VmxKVmt3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUtpRThxcS9GUGNLeHNyN09ZQnVXekxuTTRuUmg1QkkKdEJsbjJVWEplQXJkQWlBdGtyKzliZ2czWCtWdVZTVnB0Q2dtczBYMWdHdXZOK2hLd1UyYjBxZExYUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K\n    server: https://host.docker.internal:50080\n  name: k3d-taskapi-cluster\ncontexts:\n- context:\n    cluster: k3d-taskapi-cluster\n    user: admin@k3d-taskapi-cluster\n  name: k3d-taskapi-cluster\ncurrent-context: k3d-taskapi-cluster\nkind: Config\npreferences: {}\nusers:\n- name: admin@k3d-taskapi-cluster\n  user:\n    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJrVENDQVRlZ0F3SUJBZ0lJR09SYnMxTlFtWG93Q2dZSUtvWkl6ajBFQXdJd0l6RWhNQjhHQTFVRUF3d1kKYXpOekxXTnNhV1Z1ZEMxallVQXhOelkwTkRZek56Y3pNQjRYRFRJMU1URXpNREF3TkRrek0xb1hEVEkyTVRFegpNREF3TkRrek0xb3dNREVYTUJVR0ExVUVDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGVEFUQmdOVkJBTVRESE41CmMzUmxiVHBoWkcxcGJqQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJBRXNSUmI0RGxpUDZtYTIKK0t0ZWg5bm9ybXhEem1ubTcvTjN5eG1WK2FDT2V1dmdMRXkzZGFaeWpjZEk0d1dFTWZiTFpEN2s5TUlSZ01rWgp0dExDRlFHalNEQkdNQTRHQTFVZER3RUIvd1FFQXdJRm9EQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBakFmCkJnTlZIU01FR0RBV2dCVFcyeTdOMk5wTmhpRWZMaS9ROHdSOEg3d0VjekFLQmdncWhrak9QUVFEQWdOSUFEQkYKQWlFQWc4cFI1ay9jeEI5d0lMTUJ4Y2xYNGdNZUhxb3RRMFZHOEk0eFpuY25iRXdDSUU0RVAvUysxUWZqKytnegpqSFdTM1NITXlQSUVvcE94b0hqbDJ0MUtTbS9SCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdFkyeHAKWlc1MExXTmhRREUzTmpRME5qTTNOek13SGhjTk1qVXhNVE13TURBME9UTXpXaGNOTXpVeE1USTRNREEwT1RNegpXakFqTVNFd0h3WURWUVFEREJock0zTXRZMnhwWlc1MExXTmhRREUzTmpRME5qTTNOek13V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUSHVKRmswbEFWWWFKS0RLeHJEQVZmcVNrNU55RHlyd2hhU2NMNVlFUVUKSXB2enNnU1k5bnBwWmJnRVhRN3ZvUTJycXE5WURJS3VUNkdBY2ZvQWNqUk5vMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVTF0c3V6ZGphVFlZaEh5NHYwUE1FCmZCKzhCSE13Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUliOG9zbUFXK0t0Zkh3RHVJRHB3Y2xmRkNwanBSeDEKNXVHTk5iUG1DVjhFQWlBV3ZWTkQ1bHJFME1CWStEQnBtWmxQS3B3a0gyQUU1alEyS2pmeTcvVjAxUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K\n    client-key-data: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUJzcHRkdFBoU0trdk9iVUllcVhSa1BHSHFON2c1ZHhUT0pCNEpodFN5bGpvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFQVN4RkZ2Z09XSS9xWnJiNHExNkgyZWl1YkVQT2FlYnY4M2ZMR1pYNW9JNTY2K0FzVExkMQpwbktOeDBqakJZUXg5c3RrUHVUMHdoR0F5Um0yMHNJVkFRPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=\n",
+            "name": "taskapi-cluster",
+            "network": "k3d-taskapi-cluster",
+            "token": "NQFQITDpNhNJqFKwiRoh"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "kubeconfig_raw"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "token"
+              }
+            ]
+          ],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "helm_release",
+      "name": "taskapi",
+      "provider": "provider[\"registry.terraform.io/hashicorp/helm\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "atomic": false,
+            "chart": "./helm",
+            "cleanup_on_fail": false,
+            "create_namespace": false,
+            "dependency_update": false,
+            "description": null,
+            "devel": null,
+            "disable_crd_hooks": false,
+            "disable_openapi_validation": false,
+            "disable_webhooks": false,
+            "force_update": false,
+            "id": "task-api",
+            "keyring": null,
+            "lint": false,
+            "manifest": null,
+            "max_history": 0,
+            "metadata": {
+              "app_version": "1.0",
+              "chart": "task-api",
+              "first_deployed": 1764463813,
+              "last_deployed": 1764463813,
+              "name": "task-api",
+              "namespace": "task-api",
+              "notes": "",
+              "revision": 1,
+              "values": "{\"image\":{\"repository\":\"ghcr.io/poorniman-personal/task-api\",\"tag\":\"latest\"}}",
+              "version": "0.1.0"
+            },
+            "name": "task-api",
+            "namespace": "task-api",
+            "pass_credentials": false,
+            "postrender": null,
+            "recreate_pods": false,
+            "render_subchart_notes": true,
+            "replace": false,
+            "repository": null,
+            "repository_ca_file": null,
+            "repository_cert_file": null,
+            "repository_key_file": null,
+            "repository_password": null,
+            "repository_username": null,
+            "reset_values": false,
+            "resources": null,
+            "reuse_values": false,
+            "set": null,
+            "set_list": null,
+            "set_sensitive": null,
+            "set_wo": null,
+            "set_wo_revision": null,
+            "skip_crds": false,
+            "status": "deployed",
+            "take_ownership": false,
+            "timeout": 300,
+            "timeouts": null,
+            "upgrade_install": false,
+            "values": [
+              "image:\r\n  repository: ghcr.io/poorniman-personal/task-api\r\n  tag: latest\r\n"
+            ],
+            "verify": false,
+            "version": "0.1.0",
+            "wait": true,
+            "wait_for_jobs": false
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "repository_password"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "identity": {
+            "namespace": "task-api",
+            "release_name": "task-api"
+          },
+          "dependencies": [
+            "data.k3d_cluster.taskapi",
+            "k3d_cluster.taskapi",
+            "kubernetes_namespace.taskapi",
+            "local_file.kubeconfig"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "k3d_cluster",
+      "name": "taskapi",
+      "provider": "provider[\"registry.terraform.io/pvotal-tech/k3d\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "agents": 1,
+            "credentials": [
+              {
+                "client_certificate": "-----BEGIN CERTIFICATE-----\nMIIBkTCCATegAwIBAgIIGORbs1NQmXowCgYIKoZIzj0EAwIwIzEhMB8GA1UEAwwY\nazNzLWNsaWVudC1jYUAxNzY0NDYzNzczMB4XDTI1MTEzMDAwNDkzM1oXDTI2MTEz\nMDAwNDkzM1owMDEXMBUGA1UEChMOc3lzdGVtOm1hc3RlcnMxFTATBgNVBAMTDHN5\nc3RlbTphZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAEsRRb4DliP6ma2\n+Kteh9normxDzmnm7/N3yxmV+aCOeuvgLEy3daZyjcdI4wWEMfbLZD7k9MIRgMkZ\nttLCFQGjSDBGMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDAjAf\nBgNVHSMEGDAWgBTW2y7N2NpNhiEfLi/Q8wR8H7wEczAKBggqhkjOPQQDAgNIADBF\nAiEAg8pR5k/cxB9wILMBxclX4gMeHqotQ0VG8I4xZncnbEwCIE4EP/S+1Qfj++gz\njHWS3SHMyPIEopOxoHjl2t1KSm/R\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIBdzCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3MtY2xp\nZW50LWNhQDE3NjQ0NjM3NzMwHhcNMjUxMTMwMDA0OTMzWhcNMzUxMTI4MDA0OTMz\nWjAjMSEwHwYDVQQDDBhrM3MtY2xpZW50LWNhQDE3NjQ0NjM3NzMwWTATBgcqhkjO\nPQIBBggqhkjOPQMBBwNCAATHuJFk0lAVYaJKDKxrDAVfqSk5NyDyrwhaScL5YEQU\nIpvzsgSY9nppZbgEXQ7voQ2rqq9YDIKuT6GAcfoAcjRNo0IwQDAOBgNVHQ8BAf8E\nBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU1tsuzdjaTYYhHy4v0PME\nfB+8BHMwCgYIKoZIzj0EAwIDSAAwRQIhAIb8osmAW+KtfHwDuIDpwclfFCpjpRx1\n5uGNNbPmCV8EAiAWvVND5lrE0MBY+DBpmZlPKpwkH2AE5jQ2Kjfy7/V01Q==\n-----END CERTIFICATE-----\n",
+                "client_key": "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIBsptdtPhSKkvObUIeqXRkPGHqN7g5dxTOJB4JhtSyljoAoGCCqGSM49\nAwEHoUQDQgAEASxFFvgOWI/qZrb4q16H2eiubEPOaebv83fLGZX5oI566+AsTLd1\npnKNx0jjBYQx9stkPuT0whGAyRm20sIVAQ==\n-----END EC PRIVATE KEY-----\n",
+                "cluster_ca_certificate": "-----BEGIN CERTIFICATE-----\nMIIBdzCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy\ndmVyLWNhQDE3NjQ0NjM3NzMwHhcNMjUxMTMwMDA0OTMzWhcNMzUxMTI4MDA0OTMz\nWjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE3NjQ0NjM3NzMwWTATBgcqhkjO\nPQIBBggqhkjOPQMBBwNCAAT1RSHCZZiRyCErkY5MqrctieXFfRyR9fnBT3sL5Jxg\nhBHItK2PZvv/iyV6rpJC218T8iq1NKElNXqeB+3frkoto0IwQDAOBgNVHQ8BAf8E\nBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUQDDtrUxgbQUZeNyVuQ78\nd5VlJVkwCgYIKoZIzj0EAwIDSAAwRQIhAKiE8qq/FPcKxsr7OYBuWzLnM4nRh5BI\ntBln2UXJeArdAiAtkr+9bgg3X+VuVSVptCgms0X1gGuvN+hKwU2b0qdLXQ==\n-----END CERTIFICATE-----\n",
+                "host": "https://host.docker.internal:50080",
+                "raw": "apiVersion: v1\nclusters:\n- cluster:\n    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUzTmpRME5qTTNOek13SGhjTk1qVXhNVE13TURBME9UTXpXaGNOTXpVeE1USTRNREEwT1RNegpXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUzTmpRME5qTTNOek13V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUMVJTSENaWmlSeUNFcmtZNU1xcmN0aWVYRmZSeVI5Zm5CVDNzTDVKeGcKaEJISXRLMlBadnYvaXlWNnJwSkMyMThUOGlxMU5LRWxOWHFlQiszZnJrb3RvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVVFERHRyVXhnYlFVWmVOeVZ1UTc4CmQ1VmxKVmt3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUtpRThxcS9GUGNLeHNyN09ZQnVXekxuTTRuUmg1QkkKdEJsbjJVWEplQXJkQWlBdGtyKzliZ2czWCtWdVZTVnB0Q2dtczBYMWdHdXZOK2hLd1UyYjBxZExYUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K\n    server: https://host.docker.internal:50080\n  name: k3d-taskapi-cluster\ncontexts:\n- context:\n    cluster: k3d-taskapi-cluster\n    user: admin@k3d-taskapi-cluster\n  name: k3d-taskapi-cluster\ncurrent-context: k3d-taskapi-cluster\nkind: Config\npreferences: {}\nusers:\n- name: admin@k3d-taskapi-cluster\n  user:\n    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJrVENDQVRlZ0F3SUJBZ0lJR09SYnMxTlFtWG93Q2dZSUtvWkl6ajBFQXdJd0l6RWhNQjhHQTFVRUF3d1kKYXpOekxXTnNhV1Z1ZEMxallVQXhOelkwTkRZek56Y3pNQjRYRFRJMU1URXpNREF3TkRrek0xb1hEVEkyTVRFegpNREF3TkRrek0xb3dNREVYTUJVR0ExVUVDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGVEFUQmdOVkJBTVRESE41CmMzUmxiVHBoWkcxcGJqQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJBRXNSUmI0RGxpUDZtYTIKK0t0ZWg5bm9ybXhEem1ubTcvTjN5eG1WK2FDT2V1dmdMRXkzZGFaeWpjZEk0d1dFTWZiTFpEN2s5TUlSZ01rWgp0dExDRlFHalNEQkdNQTRHQTFVZER3RUIvd1FFQXdJRm9EQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBakFmCkJnTlZIU01FR0RBV2dCVFcyeTdOMk5wTmhpRWZMaS9ROHdSOEg3d0VjekFLQmdncWhrak9QUVFEQWdOSUFEQkYKQWlFQWc4cFI1ay9jeEI5d0lMTUJ4Y2xYNGdNZUhxb3RRMFZHOEk0eFpuY25iRXdDSUU0RVAvUysxUWZqKytnegpqSFdTM1NITXlQSUVvcE94b0hqbDJ0MUtTbS9SCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdFkyeHAKWlc1MExXTmhRREUzTmpRME5qTTNOek13SGhjTk1qVXhNVE13TURBME9UTXpXaGNOTXpVeE1USTRNREEwT1RNegpXakFqTVNFd0h3WURWUVFEREJock0zTXRZMnhwWlc1MExXTmhRREUzTmpRME5qTTNOek13V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUSHVKRmswbEFWWWFKS0RLeHJEQVZmcVNrNU55RHlyd2hhU2NMNVlFUVUKSXB2enNnU1k5bnBwWmJnRVhRN3ZvUTJycXE5WURJS3VUNkdBY2ZvQWNqUk5vMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVTF0c3V6ZGphVFlZaEh5NHYwUE1FCmZCKzhCSE13Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUliOG9zbUFXK0t0Zkh3RHVJRHB3Y2xmRkNwanBSeDEKNXVHTk5iUG1DVjhFQWlBV3ZWTkQ1bHJFME1CWStEQnBtWmxQS3B3a0gyQUU1alEyS2pmeTcvVjAxUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K\n    client-key-data: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUJzcHRkdFBoU0trdk9iVUllcVhSa1BHSHFON2c1ZHhUT0pCNEpodFN5bGpvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFQVN4RkZ2Z09XSS9xWnJiNHExNkgyZWl1YkVQT2FlYnY4M2ZMR1pYNW9JNTY2K0FzVExkMQpwbktOeDBqakJZUXg5c3RrUHVUMHdoR0F5Um0yMHNJVkFRPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=\n"
+              }
+            ],
+            "env": [],
+            "id": "taskapi-cluster",
+            "image": "docker.io/rancher/k3s:v1.33.6-k3s1",
+            "k3d": [],
+            "k3s": [],
+            "kube_api": [],
+            "kubeconfig": [
+              {
+                "switch_current_context": true,
+                "update_default_kubeconfig": true
+              }
+            ],
+            "label": [],
+            "name": "taskapi-cluster",
+            "network": "k3d-taskapi-cluster",
+            "port": [
+              {
+                "container_port": 80,
+                "host": "",
+                "host_port": 9000,
+                "node_filters": [],
+                "protocol": ""
+              }
+            ],
+            "registries": [],
+            "runtime": [],
+            "servers": 1,
+            "token": "NQFQITDpNhNJqFKwiRoh",
+            "volume": []
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "credentials"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "token"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "kubernetes_namespace",
+      "name": "taskapi",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "task-api",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "task-api",
+                "resource_version": "691",
+                "uid": "b81c21ee-e37d-49f0-9b31-775ae6593108"
+              }
+            ],
+            "timeouts": null,
+            "wait_for_default_service_account": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "Namespace",
+            "name": "task-api"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "data.k3d_cluster.taskapi",
+            "k3d_cluster.taskapi",
+            "local_file.kubeconfig"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "kubeconfig",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "apiVersion: v1\nclusters:\n- cluster:\n    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUzTmpRME5qTTNOek13SGhjTk1qVXhNVE13TURBME9UTXpXaGNOTXpVeE1USTRNREEwT1RNegpXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUzTmpRME5qTTNOek13V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUMVJTSENaWmlSeUNFcmtZNU1xcmN0aWVYRmZSeVI5Zm5CVDNzTDVKeGcKaEJISXRLMlBadnYvaXlWNnJwSkMyMThUOGlxMU5LRWxOWHFlQiszZnJrb3RvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVVFERHRyVXhnYlFVWmVOeVZ1UTc4CmQ1VmxKVmt3Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUtpRThxcS9GUGNLeHNyN09ZQnVXekxuTTRuUmg1QkkKdEJsbjJVWEplQXJkQWlBdGtyKzliZ2czWCtWdVZTVnB0Q2dtczBYMWdHdXZOK2hLd1UyYjBxZExYUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K\n    server: https://host.docker.internal:50080\n  name: k3d-taskapi-cluster\ncontexts:\n- context:\n    cluster: k3d-taskapi-cluster\n    user: admin@k3d-taskapi-cluster\n  name: k3d-taskapi-cluster\ncurrent-context: k3d-taskapi-cluster\nkind: Config\npreferences: {}\nusers:\n- name: admin@k3d-taskapi-cluster\n  user:\n    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJrVENDQVRlZ0F3SUJBZ0lJR09SYnMxTlFtWG93Q2dZSUtvWkl6ajBFQXdJd0l6RWhNQjhHQTFVRUF3d1kKYXpOekxXTnNhV1Z1ZEMxallVQXhOelkwTkRZek56Y3pNQjRYRFRJMU1URXpNREF3TkRrek0xb1hEVEkyTVRFegpNREF3TkRrek0xb3dNREVYTUJVR0ExVUVDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGVEFUQmdOVkJBTVRESE41CmMzUmxiVHBoWkcxcGJqQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJBRXNSUmI0RGxpUDZtYTIKK0t0ZWg5bm9ybXhEem1ubTcvTjN5eG1WK2FDT2V1dmdMRXkzZGFaeWpjZEk0d1dFTWZiTFpEN2s5TUlSZ01rWgp0dExDRlFHalNEQkdNQTRHQTFVZER3RUIvd1FFQXdJRm9EQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBakFmCkJnTlZIU01FR0RBV2dCVFcyeTdOMk5wTmhpRWZMaS9ROHdSOEg3d0VjekFLQmdncWhrak9QUVFEQWdOSUFEQkYKQWlFQWc4cFI1ay9jeEI5d0lMTUJ4Y2xYNGdNZUhxb3RRMFZHOEk0eFpuY25iRXdDSUU0RVAvUysxUWZqKytnegpqSFdTM1NITXlQSUVvcE94b0hqbDJ0MUtTbS9SCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdFkyeHAKWlc1MExXTmhRREUzTmpRME5qTTNOek13SGhjTk1qVXhNVE13TURBME9UTXpXaGNOTXpVeE1USTRNREEwT1RNegpXakFqTVNFd0h3WURWUVFEREJock0zTXRZMnhwWlc1MExXTmhRREUzTmpRME5qTTNOek13V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUSHVKRmswbEFWWWFKS0RLeHJEQVZmcVNrNU55RHlyd2hhU2NMNVlFUVUKSXB2enNnU1k5bnBwWmJnRVhRN3ZvUTJycXE5WURJS3VUNkdBY2ZvQWNqUk5vMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVTF0c3V6ZGphVFlZaEh5NHYwUE1FCmZCKzhCSE13Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQUliOG9zbUFXK0t0Zkh3RHVJRHB3Y2xmRkNwanBSeDEKNXVHTk5iUG1DVjhFQWlBV3ZWTkQ1bHJFME1CWStEQnBtWmxQS3B3a0gyQUU1alEyS2pmeTcvVjAxUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K\n    client-key-data: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUJzcHRkdFBoU0trdk9iVUllcVhSa1BHSHFON2c1ZHhUT0pCNEpodFN5bGpvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFQVN4RkZ2Z09XSS9xWnJiNHExNkgyZWl1YkVQT2FlYnY4M2ZMR1pYNW9JNTY2K0FzVExkMQpwbktOeDBqakJZUXg5c3RrUHVUMHdoR0F5Um0yMHNJVkFRPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=\n",
+            "content_base64": null,
+            "content_base64sha256": "pJ4ryAxEKppxKtUTI+VshG7eHcKqyGaKkkbRH9EJOJ4=",
+            "content_base64sha512": "Ad8qhcZdp5CLQZR9BkVkA2BBlV+QYO9omkr6lBIuUXbOcf7/dxzc5CIMqcLPza8hWe7Sdr40ntk0Ed9p3Q+6bw==",
+            "content_md5": "45389af0d85d93c6775f9fbdb7952b08",
+            "content_sha1": "ba95694424dde4b379154c7a2d2203210cfa9bc2",
+            "content_sha256": "a49e2bc80c442a9a712ad51323e56c846ede1dc2aac8668a9246d11fd109389e",
+            "content_sha512": "01df2a85c65da7908b41947d064564036041955f9060ef689a4afa94122e5176ce71feff771cdce4220ca9c2cfcdaf2159eed276be349ed93411df69dd0fba6f",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./kubeconfig.yaml",
+            "id": "ba95694424dde4b379154c7a2d2203210cfa9bc2",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "content"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "dependencies": [
+            "data.k3d_cluster.taskapi",
+            "k3d_cluster.taskapi"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

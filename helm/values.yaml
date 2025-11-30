@@ -1,3 +1,4 @@
+replicaCount: 1
 image:
   repository: ghcr.io/poorniman-personal/task-api
   tag: latest
