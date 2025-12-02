@@ -1,3 +1,5 @@
 aws_region = "ap-southeast-2"
 cluster_name = "taskapi-cluster"
 namespace = "task-api"
+image_repo = "ghcr.io/poorniman-personal/task-api"
+image_tag = "latest"
