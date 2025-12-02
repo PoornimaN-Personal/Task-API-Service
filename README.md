@@ -195,14 +195,14 @@ Terraform configuration will do the following,
 > The IAM account used must have permissions to create and manage AWS EKS clusters, VPCs, subnets, IAM roles/policies, and to deploy applications via the Helm provider.
 
 - Review and Update `terraform.tfvars` file - 
-    - This file contains project‑specific variables such as  `aws_region`   `cluster_name`   `namespace`
-    - Please update `aws_region` with the same value which you used while running  `aws configure`
+    - This file contains project‑specific variables as follows:
+    -  `aws_region` - Update it with the same value which you used while running  `aws configure`
     -  `cluster_name`  and  `namespace` - If you want you can update it with different values or else leave it as is.
-      
-- Review and Update `values_override.yaml.tpl` file - **Optional**
-    - By default it will pick up the image from the repository `ghcr.io/poorniman-personal/task-api`
-    - You can update `${image_repo}` and `${image_tag}`  with the image which we published to GHCR in the [GitHub CI Validation](#github-ci-validation) section
-        - For Example `ghcr.io/<your-git-username>/task-api`
+    -  `image_repo`  and  `image_tag`
+        -    If you want you can update it with image which we published to GHCR in the [GitHub CI Validation](#github-ci-validation) section.
+        -    In case if you are  updating `image_repo` in `terraform.tfvars` file it should be in the format `ghcr.io/<your-git-username in lowercase>/task-api`
+        -    You should pass your git username in lowercase or else the pod will fail with `InvalidImage` error.
+
 - Initialize Terraform  
 ```
 terraform init
@@ -304,8 +304,8 @@ terraform destroy
       - Provided structured explanations with the reason for the error and step‑by‑step fixes that reduced trial‑and‑error time.  
    - **Manual Changes Required?**  
       - Although AI provided initial drafts, all output required manual refinement, including:  
-          - The GET /tasks endpoint was updated to include an ID field for each task, based on insights gained during my learning.  
-          - Updated Helm chart paths and value file and yaml files references to match the out project  requirement.  
+          - The GET /tasks endpoint was updated to include an ID field for each task.  
+          - Updated Helm chart paths and value file and yaml files references to match our project  requirement.  
     - **How did you verify the AI output?**  
          - Verified the output by running commands like `pytest` `terraform` `kubectl` locally  
          - Validated the cluster health and deployments by follwing the steps mentioned in [Validation](#validation)  
