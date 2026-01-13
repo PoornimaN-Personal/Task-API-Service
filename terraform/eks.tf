@@ -5,7 +5,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "21.3.2"
 
-  name    = var.cluster_name
+  name    = "taskapi-cluster-${var.env}"
   kubernetes_version = "1.33"
   enable_irsa         = true
   create_cloudwatch_log_group = false
@@ -34,12 +34,12 @@ module "eks" {
   eks_managed_node_groups = {
     default = {
       instance_types = ["t3.medium"]
-      desired_size   = 1
-      max_size       = 2
-      min_size       = 1
+      desired_size   = var.node_desired_size
+      max_size       = var.node_max_size
+      min_size       = var.node_min_size
     }
   }
-
+ 
   # --- Dynamic access entries ---
   access_entries = {
     caller_user = {

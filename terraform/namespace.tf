@@ -1,7 +1,7 @@
 resource "kubernetes_namespace" "taskapi" {
      provider = kubernetes.eks
   metadata {
-    name = var.namespace
+    name = "task-api-${var.env}"
   }
 
   depends_on = [

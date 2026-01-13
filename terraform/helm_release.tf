@@ -1,7 +1,7 @@
 
 resource "helm_release" "taskapi" {
   provider = helm.eks
-  name       = "taskapi"
+  name       = "taskapi-${var.env}"
   namespace  = kubernetes_namespace.taskapi.metadata[0].name
   chart      = "${path.module}/../helm"
   version    = var.chart_version
@@ -12,6 +12,8 @@ resource "helm_release" "taskapi" {
       image_tag  = var.image_tag
     })
   ]
+  
+
 
   depends_on = [
     module.eks,
