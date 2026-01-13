@@ -340,6 +340,16 @@ terraform apply --auto-approve
 > ✔️ This provisions the kind cluster and deploys the application locally.
 ### Follow the [Validation](#validation) section to do the complete validation.  
 
+### Terraform destroy
+ - After completing validation and testing, it’s important to clean up resources. Run the below commandss to delete the resource properly.
+```
+terraform state rm kubernetes_namespace_v1.taskapi
+terraform state rm kind_cluster.local
+kind delete cluster --name "clustername"
+terraform destroy
+```
+> ✔️ This command will remove all local resources created by your Terraform configuration (Kind cluster, namespace and helm deployment)
+
 ## Use of AI
  - Copilot and ChatGPT were used to assist with FastAPI, Pytest, and Helm chart code and and troubleshooting issues.  
    - **Reason for use**  
