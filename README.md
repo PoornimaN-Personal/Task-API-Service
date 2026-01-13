@@ -223,7 +223,7 @@ terraform workspace select <env>
 
 - Review the execution plan  
 ```
-terraform plan
+terraform plan -var-file=<env>.tfvars  
 ```
 > ✔️ Shows what resources will be created/modified
 
