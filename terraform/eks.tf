@@ -39,7 +39,10 @@ module "eks" {
       min_size       = var.node_min_size
     }
   }
- 
+  tags = {
+    Environment = var.env
+    Project = "task=api"
+  }
   # --- Dynamic access entries ---
   access_entries = {
     caller_user = {
