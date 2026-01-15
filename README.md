@@ -302,7 +302,7 @@ kubectl port-forward svc/task-api <port>:8000 -n task-api-<env>
 terraform state rm kubernetes_namespace.taskapi
 ```
 ```
-terraform destroy
+terraform destroy -var-file=<env>.tfvars  
 ```
 - Type yes when prompted.  
 > ✔️ This command will remove all AWS resources created by your Terraform configuration (EKS cluster, VPC, subnets,helm deployment etc.)
